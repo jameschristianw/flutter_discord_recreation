@@ -1,6 +1,6 @@
-# discord_recreation
+# Discord Recreation
 
-A new Flutter project.
+Recreating Discord Web App using flutter. Flutter version used is 2.2.3.
 
 ## Getting Started
 
