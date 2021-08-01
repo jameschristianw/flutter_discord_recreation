@@ -12,14 +12,29 @@ class ServerTile extends StatefulWidget {
 }
 
 class _ServerTileState extends State<ServerTile> {
+  Color? backColor;
   double? boxRadius;
   double radius = 22;
+  bool hasThumbnail = true;
+
+  String shortServerName = "";
 
   double? onHoverHeight, onHoverWidth;
 
   @override
   void initState() {
     super.initState();
+
+    if (widget.server!.thumbnailUrl == null) {
+      hasThumbnail = false;
+      List<String>? names = widget.server!.serverName?.split(" ");
+      print(names);
+      for (var name in names!) {
+        shortServerName += name.substring(0, 1);
+      }
+    }
+
+    backColor = Color.fromRGBO(54, 57, 63, 1);
     boxRadius = radius;
     onHoverHeight = 0;
     onHoverWidth = 0;
@@ -60,15 +75,21 @@ class _ServerTileState extends State<ServerTile> {
                 onExit: (event) => _resetRadius(),
                 child: CircleAvatar(
                   radius: radius,
-                  backgroundColor: Color.fromRGBO(32, 34, 37, 1),
+                  backgroundColor:
+                      !hasThumbnail ? backColor : Color.fromRGBO(32, 34, 37, 1),
                   child: AnimatedContainer(
+                    padding: !hasThumbnail ? EdgeInsets.all(3) : null,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(boxRadius!),
-                      color: Color.fromRGBO(32, 34, 37, 1),
                     ),
-                    child: CachedNetworkImage(
-                      imageUrl: widget.server!.thumbnailUrl ?? "",
-                    ),
+                    child: !hasThumbnail
+                        ? Text(
+                            shortServerName,
+                            style: TextStyle(color: Colors.white),
+                          )
+                        : CachedNetworkImage(
+                            imageUrl: widget.server!.thumbnailUrl ?? "",
+                          ),
                     clipBehavior: Clip.antiAlias,
                     duration: Duration(milliseconds: 150),
                   ),
@@ -83,6 +104,7 @@ class _ServerTileState extends State<ServerTile> {
 
   void _changeRadius() {
     setState(() {
+      backColor = Color.fromRGBO(89, 100, 244, 1);
       boxRadius = radius * 0.75;
       onHoverHeight = 22;
       onHoverWidth = 4;
@@ -91,6 +113,7 @@ class _ServerTileState extends State<ServerTile> {
 
   void _resetRadius() {
     setState(() {
+      backColor = Color.fromRGBO(54, 57, 63, 1);
       boxRadius = radius;
       onHoverHeight = 0;
       onHoverWidth = 0;

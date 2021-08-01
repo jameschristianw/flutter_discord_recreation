@@ -15,8 +15,8 @@ List<Server> dummyServers = [
   ),
   Server(
     id: 3,
-    serverName: 'Aslab',
-    thumbnailUrl: 'https://freesvg.org/img/1286146771.png',
+    serverName: 'Aslab UMN',
+    thumbnailUrl: null,
   ),
   Server(
     id: 4,
