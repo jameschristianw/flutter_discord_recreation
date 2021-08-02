@@ -1,3 +1,4 @@
+import 'package:discord_recreation/components/quickChatSection/quickChat.dart';
 import 'package:discord_recreation/components/test.dart';
 import 'package:flutter/material.dart';
 
@@ -12,13 +13,16 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Row(
-        children: [
-          NavigationBar(),
-          Expanded(
-            child: TestWidget(),
-          ),
-        ],
+      body: Container(
+        child: Row(
+          children: [
+            NavigationBar(),
+            QuickChat(),
+            Expanded(
+              child: TestWidget(),
+            ),
+          ],
+        ),
       ),
     );
   }
