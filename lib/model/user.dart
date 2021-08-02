@@ -12,4 +12,6 @@ class User {
     this.phoneNo,
     this.profilePictureUrl,
   });
+
+  String get usernameAndId => "$username#$id";
 }
