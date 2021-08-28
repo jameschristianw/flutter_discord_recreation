@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:discord_recreation/model/user.dart';
 import 'package:flutter/material.dart';
 
-import '../../../constants/globalColors.dart' as GlobalColors;
+import '../constants/global_colors.dart' as GlobalColors;
 
 class BottomProfile extends StatefulWidget {
   const BottomProfile({Key? key}) : super(key: key);

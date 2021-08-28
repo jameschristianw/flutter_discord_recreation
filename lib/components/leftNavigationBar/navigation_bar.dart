@@ -1,9 +1,9 @@
-import 'package:discord_recreation/components/leftNavigationBar/widgets/homeTile.dart';
-import 'package:discord_recreation/components/leftNavigationBar/widgets/serverTile.dart';
+import 'package:discord_recreation/components/leftNavigationBar/widgets/home_tile.dart';
+import 'package:discord_recreation/components/leftNavigationBar/widgets/server_tile.dart';
 import 'package:flutter/material.dart';
 
-import '../../dummy/serverList.dart';
-import 'widgets/bottomTile.dart';
+import '../../dummy/server_list.dart';
+import 'widgets/bottom_tile.dart';
 
 class NavigationBar extends StatefulWidget {
   const NavigationBar({Key? key}) : super(key: key);

@@ -1,11 +1,11 @@
-import 'package:discord_recreation/components/quickChatSection/widgets/quickMenu.dart';
+import 'package:discord_recreation/components/quickChatSection/widgets/quick_menu.dart';
 import 'package:flutter/material.dart';
 
-import '../../components/bottomProfile.dart';
-import './widgets/quickFriendList.dart';
-import './widgets/quickSearchBar.dart';
+import '../bottom_profile.dart';
+import 'widgets/quick_friend_list.dart';
+import 'widgets/quick_search_bar.dart';
 
-import '../../constants/globalColors.dart' as GlobalColors;
+import '../../constants/global_colors.dart' as GlobalColors;
 
 class QuickChat extends StatelessWidget {
   QuickChat({Key? key}) : super(key: key);

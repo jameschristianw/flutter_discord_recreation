@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:discord_recreation/components/leftNavigationBar/widgets/serverTile.dart';
-import 'package:discord_recreation/dummy/serverList.dart';
+import 'package:discord_recreation/components/leftNavigationBar/widgets/server_tile.dart';
+import 'package:discord_recreation/dummy/server_list.dart';
 import 'package:flutter/material.dart';
 
 class TestWidget extends StatefulWidget {

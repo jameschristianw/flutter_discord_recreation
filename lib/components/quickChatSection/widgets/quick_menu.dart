@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants/globalColors.dart' as GlobalColors;
+import '../../../constants/global_colors.dart' as GlobalColors;
 
 class QuickMenu extends StatelessWidget {
   @override
